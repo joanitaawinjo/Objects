@@ -77,7 +77,7 @@ taskList.listTasks();
 
 function Student(name, scores){
   this.name = name;
-  this.scores = score;
+  this.scores = scores;
 
   this.average = function(){
     if(this.scores.length === 0){
@@ -94,10 +94,10 @@ return sumation/this.scores.length;
   const studentTwo = new Student("Joanita", [30,20,10,50,40]);
 
 
-console.log(`${studentOne.name}'s average scor: ${studentOne.average()}`);
+console.log(`${studentOne.name}'s average score: ${studentOne.average()}`);
 console.log(`${studentOne.name} has passed: ${studentOne.hasPassed()}`);
 
-console.log(`${studentTwo.name}'s average scor: ${studentTwo.average()}`);
+console.log(`${studentTwo.name}'s average score: ${studentTwo.average()}`);
 console.log(`${studentTwo.name} has passed: ${studentTwo.hasPassed()}`);
 
 
