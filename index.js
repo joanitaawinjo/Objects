@@ -1,27 +1,26 @@
 // Create a BankAccount constructor function that takes a user's name and balance. Add a method called deposit(amount) that increases the balance and logs the new balance, and another method withdraw(amount) that decreases the balance only if there are enough funds. Create 3 user accounts and simulate deposits and withdrawals.
 
 //Psuodocode
-//1. // Create user accounts
-// Simulate deposits and withdrawals
+//
+//Create user accounts
+//Simulate deposits and withdrawals
 
 function BankAccount(name, balance) {
   this.name = name;
   this.balance = balance;
-}
-
-BankAccount.prototype.deposit = function (amount) {
-  this.balance += amount;
-  console.log("New balance after deposit: " + this.balance);
-};
-
-BankAccount.prototype.withdraw = function (amount) {
-  if (amount <= this.balance) {
-    this.balance -= amount;
-    console.log("New balance after withdrawal: " + this.balance);
-  } else {
-    console.log("Insufficient funds for withdrawal");
+  this.deposit = function(amount){
+    console.log("New balance after deposit: " + this.balance);
   }
-};
+
+  this.withdraw = function(amount){
+    if(amount <= this.balance){
+      console.log("New balance after withdrawal: " + this.balance);
+    }
+    else{
+      console.log("Insufficient funds for withdrawal");
+    }
+  }
+}
 
 var user1 = new BankAccount("User1", 1000);
 var user2 = new BankAccount("User2", 1500);
